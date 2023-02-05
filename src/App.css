@@ -1,38 +1,100 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
+  margin: 30px auto;
+  max-width: 600px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+h2,
+#description {
+  text-align: right;
+}
+#main-emoji {
+  display: block;
+  float: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  text-align: left;
+  font-family: "Merriweather", serif;
+  margin-left: 0px;
+  font-size: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#celsius,
+#fahrenheit {
+  font-size: 30px;
+}
+footer {
+  text-align: center;
+  margin-top: 120px;
+  font-family: "Montserrat", sans-serif;
+}
+.input-city {
+  width: 425px;
+  border: none;
+}
+.search-button,
+#current-location {
+  width: 170px;
+  background: #53a8b6;
+  color: black;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 2px;
+  margin-top: -5px;
+  border: none;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+}
+.container {
+  margin: 20px 100px;
+  padding: 20px 60px 10px;
+  background: #bbe4e9;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 9px 9px 5px rgba(0, 0, 0, 0.3);
+}
+form {
+  padding: 10px 0 50px;
+}
+.future-days {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 40px;
+  margin-right: -45px;
+  font-size: 18px;
+}
+.image-weather {
+  text-align: right;
+  margin-top: -65px;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.col {
+  margin-right: -30px;
+}
+.line {
+  color: #53a8b6;
+}
+#parameters {
+  list-style: none;
+  font-family: "Merriweather", serif;
+  font-size: 12px;
+  margin-top: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: black;
 }
