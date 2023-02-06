@@ -1,19 +1,33 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-
-import "./App.css";
-
+import ReactDOM from "react-dom/client";
 import Weather from "./Weather.js";
 import Forecast from "./Forecast.js";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
-root.render(<App />);
-function App() {
+import "./App.css";
+
+export default function App() {
   return (
     <div className="App">
-      <Weather />
-      <Forecast />
+      <div className="container">
+        <Weather />
+        <Forecast />
+        <footer>
+          This project was coded by{" "}
+          <a
+            href="https://www.linkedin.com/in/mariia-velykoridko/"
+            target="_blank"
+          >
+            Mariia Velykoridko
+          </a>{" "}
+          and is{" "}
+          <a
+            href="https://github.com/mariia-bite/My-weather-app_React"
+            target="_blank"
+          >
+            open-sourced on GitHub
+          </a>
+        </footer>
+      </div>
     </div>
   );
 }
