@@ -1,10 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import Weather from "./Weather.js";
 import Forecast from "./Forecast.js";
 
 import "./App.css";
-const root = ReactDOM.createRoot(document.getElementById("root"));
 
 export default function App() {
   return (
