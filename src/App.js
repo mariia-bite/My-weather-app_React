@@ -15,6 +15,7 @@ export default function App() {
           <a
             href="https://www.linkedin.com/in/mariia-velykoridko/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Mariia Velykoridko
           </a>{" "}
@@ -22,6 +23,7 @@ export default function App() {
           <a
             href="https://github.com/mariia-bite/My-weather-app_React"
             target="_blank"
+            rel="noopener noreferrer"
           >
             open-sourced on GitHub
           </a>
