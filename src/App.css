@@ -1,46 +1,45 @@
 .App {
-  font-family: sans-serif;
-  text-align: center;
-  margin: 30px auto;
   max-width: 600px;
+  margin: 30px auto;
 }
 
-h1,
+.App footer {
+  font-size: 11px;
+  margin: 10px 0;
+}
+
+.App h1,
 h2 {
   font-family: "Merriweather", serif;
   font-weight: 700;
   font-size: 40px;
 }
-h2,
+.App h2,
 #description {
   text-align: right;
 }
-#main-emoji {
+.App #main-emoji {
   display: block;
   float: right;
 }
 
-h3 {
+.App h3 {
   text-align: left;
   font-family: "Merriweather", serif;
   margin-left: 0px;
   font-size: 12px;
 }
 
-#celsius,
+.App #celsius,
 #fahrenheit {
   font-size: 30px;
 }
-footer {
-  text-align: center;
-  margin-top: 120px;
-  font-family: "Montserrat", sans-serif;
-}
-.input-city {
+
+.App .input-city {
   width: 425px;
   border: none;
 }
-.search-button,
+.App .search-button,
 #current-location {
   width: 170px;
   background: #53a8b6;
@@ -52,7 +51,7 @@ footer {
   border: none;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
 }
-.container {
+.App .container {
   margin: 20px 100px;
   padding: 20px 60px 10px;
   background: #bbe4e9;
@@ -60,41 +59,35 @@ footer {
   border-radius: 10px;
   box-shadow: 9px 9px 5px rgba(0, 0, 0, 0.3);
 }
-form {
+.App form {
   padding: 10px 0 50px;
 }
-.future-days {
+.App .future-days {
   font-family: "Montserrat", sans-serif;
   margin-top: 40px;
   margin-right: -45px;
   font-size: 18px;
 }
-.image-weather {
+.App .image-weather {
   text-align: right;
   margin-top: -65px;
   margin-right: 10px;
 }
 
-.col {
+.App .col {
   margin-right: -30px;
 }
-.line {
+.App .line {
   color: #53a8b6;
 }
-#parameters {
-  list-style: none;
-  font-family: "Merriweather", serif;
-  font-size: 12px;
-  margin-top: 12px;
-}
 
-.active {
+.App .active {
   color: black;
   cursor: default;
   text-decoration: none;
 }
 
-.active:hover {
+.App .active:hover {
   text-decoration: none;
   color: black;
 }

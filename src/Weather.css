@@ -1,4 +1,11 @@
-.Weather h1 {
+.Weather {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.Weather h1,
+h2 {
   font-family: "Merriweather", serif;
   font-weight: 700;
   font-size: 40px;
@@ -20,17 +27,19 @@
 
 .Weather .units {
   font-size: 30px;
+  position: relative;
+  top: -32px;
 }
 
 .Weather .description {
   text-align: right;
 }
 
-.Weather .Search .input-city {
+.Weather .input-city {
   width: 425px;
   border: none;
 }
-.Weather .Search .search-button,
+.Weather .search-button,
 #current-location {
   width: 170px;
   background: #53a8b6;
@@ -42,6 +51,6 @@
   border: none;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
 }
-.Weather .Search form {
+.Weather form {
   padding: 10px 0 50px;
 }
