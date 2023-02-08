@@ -4,12 +4,11 @@ import axios from "axios";
 
 export default function Weather() {
   let [city, setCity] = useState(" ");
-  let [loaded, setLoaded] = useState(false);
-  let [weather, setWeather] = useState({});
+  let [weather, setWeather] = useState({ loaded: false });
 
   function displayWeather(response) {
-    setLoaded(true);
     setWeather({
+      loaded: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -20,8 +19,9 @@ export default function Weather() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=97bed167ec49bff56e6c1b63daef9c86&units=metric`;
-    axios.get(url).then(displayWeather);
+    const apiKey = "97bed167ec49bff56e6c1b63daef9c86";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayWeather);
   }
 
   function updateCity(event) {
@@ -42,7 +42,7 @@ export default function Weather() {
     </form>
   );
 
-  if (loaded) {
+  if (weather.loaded) {
     return (
       <div className="Weather">
         <div> {form} </div>
