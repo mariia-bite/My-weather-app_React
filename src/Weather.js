@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "./Weather.css";
-import CurrentDate from "./CurrentDate";
 import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
 
-export default function Weather() {
-  let [city, setCity] = useState(" ");
-  let [weather, setWeather] = useState({ loaded: false });
+export default function Weather(props) {
+  const [city, setCity] = useState(props.defaultCity);
+  const [weather, setWeather] = useState({ loaded: false });
 
   function displayWeather(response) {
     setWeather({
       loaded: true,
+      city: response.data.name,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
@@ -21,13 +22,17 @@ export default function Weather() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const apiKey = "97bed167ec49bff56e6c1b63daef9c86";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(displayWeather);
+    search();
   }
 
   function updateCity(event) {
     setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "97bed167ec49bff56e6c1b63daef9c86";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayWeather);
   }
 
   let form = (
@@ -48,43 +53,11 @@ export default function Weather() {
     return (
       <div className="Weather">
         <div> {form} </div>
-        <div className="row">
-          <div className="col-4">
-            <h1> {city} </h1>
-            <h3>
-              {" "}
-              <CurrentDate date={weather.date} />{" "}
-            </h3>
-          </div>
-          <div className="col-4">
-            <ul className="parameters">
-              <li>Humidity: {weather.humidity} %</li>
-              <li>Wind: {weather.wind} km/h</li>
-            </ul>
-          </div>
-          <div className="col-4">
-            <h2>
-              {Math.round(weather.temperature)}
-              <a className="active units" href="/">
-                °C
-              </a>
-              /
-              <a className="units" href="/">
-                °F{" "}
-              </a>
-            </h2>
-            <div className="description"> {weather.description} </div>
-            <img
-              className="main-emoji"
-              src={weather.icon}
-              alt={weather.description}
-              width="80"
-            />
-          </div>
-        </div>
+        <WeatherInfo data={weather} />
       </div>
     );
   } else {
-    return form;
+    search();
+    return "Loading...";
   }
 }

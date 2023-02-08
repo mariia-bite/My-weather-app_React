@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="Kyiv" />
         Нехай проблеми та негоди не роблять вам в житті погоди!
         <footer>
           This project was coded by{" "}
