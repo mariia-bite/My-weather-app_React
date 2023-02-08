@@ -38,7 +38,7 @@ export default function Weather() {
         className="input-city"
       />
       <input type="submit" value="Search" className="search-button" />
-      <button>Your city</button>
+      <button className="current-location">Your city</button>
     </form>
   );
 
@@ -52,7 +52,7 @@ export default function Weather() {
             <h3> Tuesday </h3>
           </div>
           <div className="col-4">
-            <ul>
+            <ul className="parameters">
               <li>Humidity: {weather.humidity} %</li>
               <li>Wind: {weather.wind} km/h</li>
             </ul>
@@ -69,7 +69,12 @@ export default function Weather() {
               </a>
             </h2>
             <div className="description"> {weather.description} </div>
-            <img src={weather.icon} alt={weather.description} width="80" />
+            <img
+              className="main-emoji"
+              src={weather.icon}
+              alt={weather.description}
+              width="80"
+            />
           </div>
         </div>
       </div>

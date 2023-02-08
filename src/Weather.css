@@ -3,7 +3,9 @@
   text-align: center;
   margin: 30px auto;
 }
-
+.Weather h1 {
+  text-align: left;
+}
 .Weather h1,
 h2 {
   font-family: "Merriweather", serif;
@@ -18,7 +20,7 @@ h2 {
   font-size: 12px;
 }
 
-.Weather .parameters {
+.Weather ul.parameters {
   list-style: none;
   font-family: "Merriweather", serif;
   font-size: 12px;
@@ -27,8 +29,6 @@ h2 {
 
 .Weather .units {
   font-size: 30px;
-  position: relative;
-  top: -32px;
 }
 
 .Weather .description {
@@ -40,7 +40,7 @@ h2 {
   border: none;
 }
 .Weather .search-button,
-#current-location {
+.current-location {
   width: 170px;
   background: #53a8b6;
   color: black;
@@ -53,4 +53,76 @@ h2 {
 }
 .Weather form {
   padding: 10px 0 50px;
+}
+
+.App h1,
+h2 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+.App h2,
+.description {
+  text-align: right;
+}
+.App .main-emoji {
+  display: block;
+  float: right;
+}
+
+.App h3 {
+  text-align: left;
+  font-family: "Merriweather", serif;
+  margin-left: 0px;
+  font-size: 12px;
+}
+
+.App #celsius,
+#fahrenheit {
+  font-size: 30px;
+}
+
+.App .input-city {
+  width: 425px;
+  border: none;
+}
+.App .search-button,
+#current-location {
+  width: 170px;
+  background: #53a8b6;
+  color: black;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 2px;
+  margin-top: -5px;
+  border: none;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+.App form {
+  padding: 10px 0 50px;
+}
+.App .future-days {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 40px;
+  margin-right: -45px;
+  font-size: 18px;
+}
+
+.App .col {
+  margin-right: -30px;
+}
+.App .line {
+  color: #53a8b6;
+}
+
+.App .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.App .active:hover {
+  text-decoration: none;
+  color: black;
 }

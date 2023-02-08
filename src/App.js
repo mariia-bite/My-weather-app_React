@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather />
-        <Forecast />
+        Нехай проблеми та негоди не роблять вам в житті погоди!
         <footer>
           This project was coded by{" "}
           <a
@@ -27,6 +27,9 @@ export default function App() {
           >
             open-sourced on GitHub
           </a>
+          <div className="image-weather">
+            <img src="src/weather-girl.svg" width="100" alt="weather-girl" />
+          </div>
         </footer>
       </div>
     </div>
