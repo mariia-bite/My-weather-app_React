@@ -1,5 +1,6 @@
 import React from "react";
 import CurrentDate from "./CurrentDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   return (
@@ -30,12 +31,9 @@ export default function WeatherInfo(props) {
             </a>
           </h2>
           <div className="description"> {props.data.description} </div>
-          <img
-            className="main-emoji"
-            src={props.data.icon}
-            alt={props.data.description}
-            width="80"
-          />
+          <div className="float-left">
+            <WeatherIcon code={props.data.icon} size={70} />
+          </div>
         </div>
       </div>
     </div>

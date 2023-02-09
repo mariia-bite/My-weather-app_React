@@ -54,6 +54,11 @@ h2 {
 .Weather form {
   padding: 10px 0 50px;
 }
+.Weather canvas {
+  display: block;
+  float: right;
+  margin-top: 10px;
+}
 
 .App h1,
 h2 {
@@ -64,10 +69,6 @@ h2 {
 .App h2,
 .description {
   text-align: right;
-}
-.App .main-emoji {
-  display: block;
-  float: right;
 }
 
 .App h3 {
