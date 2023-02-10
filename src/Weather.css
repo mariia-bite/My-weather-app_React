@@ -23,12 +23,14 @@ h2 {
 .Weather ul.parameters {
   list-style: none;
   font-family: "Merriweather", serif;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 12px;
 }
 
-.Weather .units {
-  font-size: 30px;
+.Weather .unit {
+  font-size: 25px;
+  position: relative;
+  top: -20px;
 }
 
 .Weather .description {
