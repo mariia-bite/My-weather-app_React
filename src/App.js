@@ -1,5 +1,6 @@
 import React from "react";
 import Weather from "./Weather.js";
+import WeatherImage from "./images/WeatherImage.png";
 
 import "./App.css";
 
@@ -9,6 +10,9 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Kyiv" />
         Нехай проблеми та негоди не роблять вам в житті погоди!
+        <div className="weather-image">
+          <img src={WeatherImage} alt="weather image" width="150" />
+        </div>
         <footer>
           This project was coded by{" "}
           <a
@@ -26,9 +30,6 @@ export default function App() {
           >
             open-sourced on GitHub
           </a>
-          <div className="image-weather">
-            <img src="src/weather-girl.svg" width="100" alt="weather-girl" />
-          </div>
         </footer>
       </div>
     </div>

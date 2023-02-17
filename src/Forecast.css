@@ -1,9 +1,13 @@
+.Forecast {
+  text-align: center;
+}
 .Forecast .future-days {
   font-family: "Montserrat", sans-serif;
-  margin-top: 40px;
-  margin-right: -45px;
-  font-size: 18px;
+
+  font-size: 16px;
 }
-.Forecast .line {
-  color: #53a8b6;
+
+.Forecast .min-temp {
+  opacity: 0.6;
+  margin-left: 5px;
 }
