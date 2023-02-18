@@ -11,7 +11,7 @@ export default function App() {
         <Weather defaultCity="Kyiv" />
         Нехай проблеми та негоди не роблять вам в житті погоди!
         <div className="weather-image">
-          <img src={WeatherImage} alt="weather image" width="150" />
+          <img src={WeatherImage} alt="weather forecast lady" width="150" />
         </div>
         <footer>
           This project was coded by{" "}
